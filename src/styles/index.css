@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #fbf9f4;
+    color: #19201d;
+  }
+}
+
+/* Editorial Newspaper Styling Utilities */
+.newspaper-hairline {
+  border-bottom: 1px solid #e5dfd5;
+}
+
+.newspaper-double-line {
+  border-top: 1px solid #143126;
+  border-bottom: 3px solid #143126;
+  height: 5px;
+}
+
+.newspaper-double-line-thin {
+  border-top: 1px solid #c5dcce;
+  border-bottom: 1px solid #c5dcce;
+  height: 4px;
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 35s linear infinite;
+}
+
+.animate-ticker:hover,
+.ticker-paused {
+  animation-play-state: paused !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f0e6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9bc2ad;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c866b;
+}
