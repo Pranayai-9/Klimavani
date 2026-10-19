@@ -3,6 +3,7 @@ import { Article } from '../types/news';
 import type { TickerItem } from '../components/navigation/BreakingTicker';
 
 const POLL_INTERVAL_MS = 5 * 60 * 1000; // Re-fetch articles every 5 minutes
+const API_BASE = import.meta.env.VITE_API_URL;
 
 interface UseNewsDataReturn {
   articles: Article[];
@@ -28,8 +29,9 @@ export function useNewsData(): UseNewsDataReturn {
   const fetchArticlesAndTicker = useCallback(async () => {
     try {
       // 1. Fetch articles from Express REST API
-      const articlesRes = await fetch('/api/articles');
+
       if (articlesRes.ok) {
+        const API_BASE = import.meta.env.VITE_API_URL;
         const json = await articlesRes.json();
         if (json.success && Array.isArray(json.data)) {
           setArticles(json.data);
@@ -47,8 +49,9 @@ export function useNewsData(): UseNewsDataReturn {
       }
 
       // 2. Fetch wire ticker
-      const tickerRes = await fetch('/api/ticker');
+
       if (tickerRes.ok) {
+        const tickerRes = await fetch(`${API_BASE}/ticker`);
         const json = await tickerRes.json();
         if (json.success && Array.isArray(json.items) && json.items.length > 0) {
           setTickerItems(json.items);
@@ -66,8 +69,10 @@ export function useNewsData(): UseNewsDataReturn {
   const refreshFeeds = useCallback(async () => {
     setIsRefreshing(true);
     try {
-      const res = await fetch('/api/refresh', { method: 'POST' });
+
       if (res.ok) {
+        const res = await fetch(`${API_BASE}/refresh`, { method: 'POST' });
+
         // Wait a moment for server-side collection to complete, then re-fetch display data
         await new Promise((r) => setTimeout(r, 1500));
         await fetchArticlesAndTicker();
