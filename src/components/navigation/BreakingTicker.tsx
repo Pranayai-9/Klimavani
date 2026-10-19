@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Pause, Play } from 'lucide-react';
-import { BREAKING_TICKER_ITEMS } from '../../data/mockArticles';
 
 export interface TickerItem {
   id: string;
   category: string;
   text: string;
+  articleUrl?: string;
 }
 
 interface BreakingTickerProps {
@@ -14,11 +14,11 @@ interface BreakingTickerProps {
 }
 
 export const BreakingTicker: React.FC<BreakingTickerProps> = ({
-  items = BREAKING_TICKER_ITEMS,
+  items = [],
   onSelectBreaking,
 }) => {
   const [isPaused, setIsPaused] = useState(false);
-  const displayItems = items.length > 0 ? items : BREAKING_TICKER_ITEMS;
+  if (items.length === 0) return null;
 
   return (
     <div
@@ -44,25 +44,32 @@ export const BreakingTicker: React.FC<BreakingTickerProps> = ({
             }`}
           >
             {/* Render items duplicated to create seamless infinite loop */}
-            {[...displayItems, ...displayItems].map((item, index) => (
+            {[...items, ...items].map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                onClick={() => onSelectBreaking?.(item.text)}
-                className="inline-flex items-center gap-2 cursor-pointer hover:text-white transition-colors group shrink-0"
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    onSelectBreaking?.(item.text);
-                  }
-                }}
+                className="inline-flex items-center gap-2 shrink-0"
               >
                 <span className="font-semibold text-paper-300 text-[10px] tracking-wider uppercase bg-forest-900/90 px-1.5 py-0.5 border border-forest-700/60">
                   {item.category}
                 </span>
-                <span className="group-hover:underline underline-offset-2">
-                  {item.text}
-                </span>
+                {item.articleUrl ? (
+                  <a
+                    href={item.articleUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline underline-offset-2 transition-colors"
+                    aria-label={`Read: ${item.text}`}
+                  >
+                    {item.text}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => onSelectBreaking?.(item.text)}
+                    className="hover:text-white hover:underline underline-offset-2 transition-colors text-left"
+                  >
+                    {item.text}
+                  </button>
+                )}
                 <span className="text-forest-400 font-bold mx-2">/</span>
               </div>
             ))}

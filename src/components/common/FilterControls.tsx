@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowUpDown, SlidersHorizontal, RefreshCw, Radio } from 'lucide-react';
+import { ArrowUpDown, SlidersHorizontal, RefreshCw, Radio, Clock } from 'lucide-react';
 import { ClimateCategory, SortOrder } from '../../types/news';
 import { CATEGORIES } from '../../data/mockArticles';
+import { formatTimeAgo } from '../../utils/date';
 
 interface FilterControlsProps {
   activeCategory: ClimateCategory;
@@ -14,6 +15,7 @@ interface FilterControlsProps {
   isRefreshing?: boolean;
   onRefresh?: () => void;
   lastUpdated?: string;
+  error?: string;
 }
 
 export const FilterControls: React.FC<FilterControlsProps> = ({
@@ -26,6 +28,8 @@ export const FilterControls: React.FC<FilterControlsProps> = ({
   isLive = false,
   isRefreshing = false,
   onRefresh,
+  lastUpdated,
+  error,
 }) => {
   return (
     <div className="py-4 border-b border-forest-900/10 mb-8">
@@ -66,10 +70,17 @@ export const FilterControls: React.FC<FilterControlsProps> = ({
         <div className="flex items-center gap-3">
           {/* Live Pipeline Indicator & Refresh Action */}
           <div className="flex items-center gap-1.5 border-r border-forest-900/15 pr-3">
-            <span className="flex items-center gap-1 text-[11px] font-medium text-forest-800">
+              <span className={`flex items-center gap-1 text-[11px] font-medium ${error ? 'text-red-800' : 'text-forest-800'}`} title={error}>
               <Radio className={`w-3 h-3 ${isLive ? 'text-forest-700 animate-pulse' : 'text-charcoal-800/40'}`} />
-              <span className="hidden sm:inline">{isLive ? 'Live Collector Active' : 'Cached Archive'}</span>
+              <span className="hidden sm:inline">{error ? 'Update unavailable' : isLive ? 'Live Feed Active' : 'Connecting to archive'}</span>
             </span>
+
+            {lastUpdated && (
+              <span className="hidden md:flex items-center gap-1 text-[11px] text-charcoal-800/60 ml-1">
+                <Clock className="w-3 h-3" />
+                <span>Archive updated {formatTimeAgo(lastUpdated)}</span>
+              </span>
+            )}
 
             {onRefresh && (
               <button
@@ -77,7 +88,7 @@ export const FilterControls: React.FC<FilterControlsProps> = ({
                 onClick={onRefresh}
                 disabled={isRefreshing}
                 aria-label="Refresh live feeds"
-                title="Fetch latest verified feeds"
+                title={isRefreshing ? 'Collecting feeds…' : 'Fetch latest verified feeds'}
                 className="p-1 text-forest-900 hover:text-forest-700 hover:bg-forest-100 disabled:opacity-50 transition-all focus:outline-none focus:ring-1 focus:ring-forest-800"
               >
                 <RefreshCw className={`w-3 h-3 ${isRefreshing ? 'animate-spin' : ''}`} />

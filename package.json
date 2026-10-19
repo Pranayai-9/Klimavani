@@ -5,30 +5,35 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run typecheck && vite build",
     "preview": "vite preview",
-    "server": "tsx server/src/index.ts"
+    "server": "tsx server/src/index.ts",
+    "start": "tsx server/src/index.ts",
+    "typecheck": "tsc --noEmit && npm run typecheck:server",
+    "typecheck:server": "tsc --noEmit --target ES2020 --module ESNext --moduleResolution bundler --esModuleInterop --strict --skipLibCheck --types node server/src/index.ts server/src/test-sources.ts"
+  },
+  "engines": {
+    "node": ">=24"
   },
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
     "express": "^5.3.0",
     "lucide-react": "^1.16.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rss-parser": "^3.13.0",
-    "sql.js": "^1.15.0"
+    "tsx": "^4.23.15"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@types/sql.js": "^1.4.11",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.23.15",
     "typescript": "^5.6.3",
     "vite": "^6.0.1"
   }

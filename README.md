@@ -1,153 +1,103 @@
-# Klimavani — Digital Climate Newspaper
+# Klimavani
 
-**Klimavani** (*Klima* meaning climate, *Vani* meaning voice / chronicle) is a modern, high-typography personal digital climate newspaper designed to bring journalistic structure, visual elegance, and scientific discipline to global environmental coverage.
+Klimavani is a digital climate newspaper that collects RSS news and presents source-attributed headlines, descriptions, publication dates, images, and article links. It uses deterministic feed parsing and category rules; it does not use AI summaries or recommendations.
 
-Phase 1 establishes the design system, editorial masthead, dynamic date and wire updates, hero storytelling, category desks, filtering and search mechanics, and responsive newspaper grid.
+## Features
 
----
+- RSS collection, normalization, URL/title deduplication, and a persistent local JSON archive.
+- Express API with category/search/sort filters, bounded pagination, source list, health status, and rate-limited manual collection.
+- React newspaper interface with featured story, searchable category filters, external source links, lazy images, and image fallbacks.
+- Background collection every configured interval and browser data polling every five minutes.
 
-## 🏛️ Brand & Editorial Philosophy
+## Stack and structure
 
-Klimavani departs from generic SaaS dashboard styling, neon accents, and excessive cards. Instead, it adopts the dignity and visual hierarchy of classic print and editorial broadsheets:
-- **Palette**: Deep forest green (`#143126`), warm archival newsprint paper background (`#fbf9f4`), charcoal typography (`#19201d`), muted sage accents, and restrained crimson wire badges.
-- **Typographic System**: High-contrast editorial serifs (*Newsreader* / *Playfair Display*) paired with legible sans-serif body typography (*Plus Jakarta Sans* / *Inter*).
-- **Integrity**: Clear institutional attribution, preserving scientific fidelity without speculative claims or AI distortion.
+- React 18, TypeScript, Vite 6, Tailwind CSS 3.
+- Node.js 24 LTS, Express 5, `rss-parser`, and JSON file storage (`data/articles.json`). SQLite is not implemented.
+- `src/`: frontend, UI components, filtering and display hooks.
+- `server/src/`: API, RSS collector, normalization, validation, source registry, and storage.
+- `data/articles.json`: generated persistent archive; ignored by Git.
 
----
+## Requirements and installation
 
-## 🛠️ Technology Stack
+Use Node.js 18 or newer and npm. From the project root:
 
-- **Framework**: [React 18](https://react.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool**: [Vite 6](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS 3](https://tailwindcss.com/) with custom editorial color schemes, hairline dividers, and custom typography
-- **Icons**: [Lucide React](https://lucide.dev/)
-
----
-
-## 📁 Project Architecture
-
-```
-Klimavani/
-├── data/
-│   └── sources.py                 # Preserved data pipeline hook for Phase 2
-├── public/
-│   └── images/                    # Local image assets and photography
-├── src/
-│   ├── components/
-│   │   ├── common/
-│   │   │   ├── EmptyState.tsx         # Empty state display with query feedback & reset
-│   │   │   ├── FilterControls.tsx     # Category chips, sort dropdown, and article counters
-│   │   │   ├── ImageWithFallback.tsx  # Graceful fallback handler for broken/missing photos
-│   │   │   └── SearchInput.tsx        # Search input with clear button
-│   │   ├── layout/
-│   │   │   ├── Footer.tsx             # Newspaper footer with source index & back-to-top
-│   │   │   └── Header.tsx             # Vol./Issue masthead, dynamic date, weather benchmark, mobile nav
-│   │   ├── navigation/
-│   │   │   └── BreakingTicker.tsx     # Animated wire ticker with pause/play & accessible controls
-│   │   └── news/
-│   │       ├── ArticleModal.tsx       # Dispatch reader modal with original source attribution
-│   │       ├── FeaturedStory.tsx      # Prominent hero editorial section
-│   │       ├── NewsCard.tsx           # Standard editorial card with tag badges & external links
-│   │       └── NewsGrid.tsx           # Responsive 3-column news grid
-│   ├── data/
-│   │   └── mockArticles.ts        # Realistic climate articles & breaking ticker items
-│   ├── hooks/
-│   │   └── useNewsFilter.ts       # State management for search, category filtering, and sorting
-│   ├── pages/
-│   │   └── HomePage.tsx           # Primary newspaper layout
-│   ├── styles/
-│   │   └── index.css              # Editorial hairline rules, ticker keyframes, custom scrollbars
-│   ├── types/
-│   │   └── news.ts                # TypeScript interfaces (Article, ClimateCategory, FilterOptions)
-│   ├── utils/
-│   │   └── date.ts                # Masthead & article date formatting utilities
-│   ├── App.tsx                    # Root application component
-│   └── main.tsx                   # Vite DOM entrypoint
-├── index.html                     # HTML5 template with Google Fonts
-├── package.json                   # Dependencies & scripts
-├── postcss.config.js              # PostCSS plugins
-├── tailwind.config.js             # Tailwind design system tokens
-├── tsconfig.json                  # TypeScript compiler settings
-└── vite.config.ts                 # Vite bundler configuration
-```
-
----
-
-## ⚡ Getting Started
-
-### Prerequisites
-- **Node.js**: v18.0.0 or later (Tested on v26.7.0)
-- **npm**: v9.0.0 or later (Tested on v11.19.0)
-
-### Installation
-```bash
-# Clone or navigate into the Klimavani root folder
-cd Klimavani
-
-# Install project dependencies
+```sh
 npm install
 ```
 
-### Development Server
-```bash
-# Terminal 1: Start Express Data API & Background Collector (Port 5000)
-npm run server
+Copy `.env.example` to `.env` if you need to change the defaults. `.env` is ignored by Git. The example file contains no credentials.
 
-# Terminal 2: Start Vite Frontend (Port 3000)
+## Configuration
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `PORT` | `5000` | Express API port |
+| `NODE_ENV` | `development` | Set to `production` to serve the built UI and disable development CORS |
+| `COLLECTION_INTERVAL_MINUTES` | `15` | Background RSS collection interval |
+| `DATA_DIR` | `./data` | Directory for the persistent `articles.json` archive; set to an absolute mounted disk path in production |
+| `MAX_ARTICLES_PER_FEED` | `20` | Maximum feed items considered per source per collection |
+| `REQUEST_TIMEOUT_MS` | `9000` | Timeout for one RSS source request |
+
+## Run locally
+
+Open two terminals in the project root:
+
+```sh
+npm run server
+```
+
+```sh
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Production Build & Verification
-```bash
-# Compile TypeScript and build production bundle
+Open `http://localhost:3000`. Vite proxies `/api` to `http://127.0.0.1:5000`. The API runs an initial collection shortly after startup and repeats according to `COLLECTION_INTERVAL_MINUTES`. The browser refreshes API data every five minutes; its refresh button triggers a real collection and is protected by a five-minute global cooldown.
+
+## Sources and collection
+
+The active source registry is `server/src/sources.ts`. The live check on 19 October 2026 succeeded for NOAA, Phys.org, UN News climate coverage, ScienceDaily, Carbon Brief, and Mongabay. NASA Earth Observatory was removed from active collection after its configured feed returned malformed XML (`No whitespace between attributes`). Recheck before re-enabling. `server/src/config/sources.ts` is a separate, currently unused registry and should not be treated as active.
+
+Each source fetch has a nine-second parser timeout and feeds are fetched concurrently with failures isolated per source. Article validation rejects missing titles, invalid publication dates, and non-HTTP(S) article URLs. Collection failures are returned with source identifiers and logged. Collection runs share a lock to prevent scheduled and manual jobs from overlapping. Deduplication removes tracking parameters and compares canonical URLs and titles.
+
+## Database and archive behavior
+
+The application currently persists to `data/articles.json` using an atomic temporary-file rename. It loads the existing archive after restart. No automatic expiry or size cap is applied, so the archive will grow over time. Keep this directory on persistent disk. The fallback UI is empty until the API responds; it does not present mock records as live news.
+
+## API
+
+- `GET /api/health` — process, stored article, and collection status.
+- `GET /api/articles?category=Research&search=ocean&sort=newest&limit=20&offset=0` — article results; `sort` supports `newest`, `oldest`, and `title`; limit is 1–200.
+- `GET /api/ticker` — current ticker items.
+- `GET /api/sources` — active source configuration.
+- `POST /api/refresh` — starts a collection, subject to in-progress and cooldown checks.
+
+## Checks
+
+```sh
+npm run typecheck
 npm run build
-
-# Preview production build locally
-npm run preview
+npx tsx server/src/test-sources.ts
 ```
 
----
+`test-sources.ts` contacts each configured RSS source sequentially. It requires outbound network access and can take time due to per-source timeouts and delays. There is no automated unit or end-to-end test suite configured yet.
 
-## ⚡ End-to-End Live Data Pipeline (Phase 2)
+## Production build and deployment
 
-```
-Verified RSS feeds and public APIs
-                 |
-                 v
-         Node.js collector
-                 |
-                 v
-      Parse and normalize records
-                 |
-                 v
-       Validate and deduplicate
-                 |
-                 v
-          Store articles
-                 |
-                 v
-        Express REST API
-                 |
-                 v
-        Klimavani frontend
-                 |
-                 v
-       News cards + images
-```
+Build the frontend with `npm run build`. With `NODE_ENV=production`, `npm start` serves the generated `dist/` directory and `/api/*` from the same Express process. This runtime is designed for Node.js 24 LTS or newer and requires an always-on process manager/platform.
 
-### Pipeline Components:
-1. **Verified Sources (`server/src/sources.ts`)**: Authoritative RSS feeds and public endpoints including NASA Earth Observatory, NOAA, Phys.org, UN Climate News, ScienceDaily, Carbon Brief, and Mongabay.
-2. **Collector (`server/src/collector.ts`)**: Parallel feed retrieval with custom User-Agent, timeouts, error isolation per feed, and automatic 30-minute background scheduling.
-3. **Parser & Normalizer (`server/src/normalizer.ts`)**: Strips raw HTML, decodes entities, extracts media/enclosure image URLs, detects climate categories and geographic regions based on editorial keywords, and generates concise editorial teasers.
-4. **Validator & Deduplicator (`server/src/validator.ts`)**: Canonicalizes URLs (stripping tracking UTM tags), eliminates duplicate dispatches across syndicates, and enforces strict schema compliance.
-5. **Storage Engine (`server/src/storage.ts`)**: Atomic, persistent JSON storage at `data/articles.json` with fallback offline seed records.
-6. **Express REST API (`server/src/index.ts`)**:
-   - `GET /api/articles` (supports `?category=`, `?search=`, `?sort=`, `?limit=`)
-   - `GET /api/ticker` (active breaking climate updates)
-   - `GET /api/sources` (configured feeds catalogue)
-   - `POST /api/refresh` (on-demand collector re-trigger)
-   - `GET /api/health`
-7. **Klimavani Frontend (`src/hooks/useNewsData.ts`)**: Real-time integration via Vite reverse proxy with live sync indicators, refresh triggers, and instant news card updates.
+### Recommended deployment shape
 
+Use one always-on Node.js 24 LTS web service for the frontend, API, and scheduled collector. This keeps the current JSON archive and in-process collection lock coherent. Configure the platform's build command as `npm ci && npm run build`, start command as `npm start`, health check as `/api/health`, `NODE_ENV=production`, `COLLECTION_INTERVAL_MINUTES=30`, and `DATA_DIR` to the mount path of a persistent disk (for example `/var/data`). Keep one service instance. The runtime serves the Vite bundle and `/api/*` from the same origin, so production CORS is disabled and no API URL is baked into the frontend.
+
+The deployment must support a continuously running process, outbound HTTP requests, and a writable persistent disk. The collector runs in the web process and stops when that process is stopped. Do not deploy this JSON-backed setup to an ephemeral filesystem, serverless functions, or multiple replicas. For hosting without a persistent disk, or when scaling beyond one instance, first move storage to a shared database and collection to one dedicated scheduled worker. No platform has been selected or deployed in this project.
+
+Build assets are cached as immutable for one year; `index.html` is revalidated. `npm run preview` remains a local preview server and is not the production server.
+
+## Known limitations
+
+- JSON file storage is suitable for this small deployment but has no database indexes, concurrent multi-process coordination, or archive retention policy.
+- Two source registries exist; only `server/src/sources.ts` is used by the current collector/API.
+- Feed categories and geographic scopes use keyword heuristics and may be imperfect.
+- External publishers may block images or change feed formats; the UI shows a fallback when images fail.
+- No automated unit, API, collector, or browser test suite is currently present.
+- Collection and JSON storage are single-process/single-instance; they are not safe for horizontal scaling.
+- Build tooling still has advisories in development dependencies; production-only dependencies currently audit clean. See `PRODUCTION_READINESS.md` before release.

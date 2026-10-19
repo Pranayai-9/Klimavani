@@ -1,4 +1,5 @@
 import { Article, ClimateCategory } from '../types/news';
+import type { TickerItem } from '../components/navigation/BreakingTicker';
 
 export const CATEGORIES: ClimateCategory[] = [
   'All News',
@@ -226,7 +227,7 @@ export const MOCK_ARTICLES: Article[] = [
   }
 ];
 
-export const BREAKING_TICKER_ITEMS = [
+export const BREAKING_TICKER_ITEMS: TickerItem[] = [
   {
     id: 't-1',
     category: 'FLOOD ALERT',
@@ -253,3 +254,4 @@ export const BREAKING_TICKER_ITEMS = [
     text: 'Bay of Bengal cyclone tracking models indicate gradual recurvature towards coastal river deltas.',
   }
 ];
+

@@ -27,7 +27,7 @@ export function cleanHtmlText(text: string = ''): string {
 }
 
 /**
- * Extracts the first image URL found in standard RSS enclosures or HTML tags
+ * Extracts and validates the first image URL found in standard RSS enclosures or HTML tags
  */
 export function extractImageUrl(rawItem: any): string | undefined {
   // 1. Enclosure check
@@ -53,10 +53,27 @@ export function extractImageUrl(rawItem: any): string | undefined {
   const htmlContent = rawItem['content:encoded'] || rawItem.content || rawItem.description || '';
   const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
   if (imgMatch && imgMatch[1]) {
-    return imgMatch[1];
+    const url = imgMatch[1];
+    // Validate that it's a proper HTTP/HTTPS URL
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url;
+    }
   }
 
   return undefined;
+}
+
+/**
+ * Validates that an image URL is accessible and properly formatted
+ */
+export function isValidImageUrl(url: string | undefined): boolean {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -121,16 +138,17 @@ export function detectGeographicScope(title: string, description: string, defaul
  * Normalizes a raw RSS feed item into a structured Article
  */
 export function normalizeFeedItem(item: any, source: FeedSource, index: number): Article {
-  const rawTitle = item.title || 'Untitled Climate Report';
+  const rawTitle = item.title || '';
   const cleanTitle = cleanHtmlText(rawTitle);
   const rawDesc = item.contentSnippet || item.summary || item.description || item.content || '';
   const cleanDesc = cleanHtmlText(rawDesc);
-  const articleUrl = item.link || item.guid || source.siteUrl;
-
-  const publishedAt = item.isoDate || item.pubDate ? new Date(item.isoDate || item.pubDate).toISOString() : new Date().toISOString();
+  const articleUrl = validHttpUrl(item.link) ? item.link : validHttpUrl(item.guid) ? item.guid : '';
+  const parsedDate = item.isoDate || item.pubDate ? new Date(item.isoDate || item.pubDate) : null;
+  const publishedAt = parsedDate && Number.isFinite(parsedDate.getTime()) ? parsedDate.toISOString() : '';
   const category = detectCategory(cleanTitle, cleanDesc, source.defaultCategory);
   const geographicScope = detectGeographicScope(cleanTitle, cleanDesc, source.defaultScope);
-  const imageUrl = extractImageUrl(item);
+  const rawImageUrl = extractImageUrl(item);
+  const imageUrl = isValidImageUrl(rawImageUrl) ? rawImageUrl : undefined;
 
   // Generate an ID based on URL or title
   const id = `art-${source.id}-${Date.now().toString(36)}-${index}`;
@@ -141,7 +159,7 @@ export function normalizeFeedItem(item: any, source: FeedSource, index: number):
 
   // Editorial teaser: first complete sentence of description
   const firstSentenceMatch = cleanDesc.match(/^(.*?[.!?])(?:\s|$)/);
-  const editorialTeaser = firstSentenceMatch ? firstSentenceMatch[1] : cleanDesc.slice(0, 160) + '...';
+  const editorialTeaser = firstSentenceMatch ? firstSentenceMatch[1] : cleanDesc.slice(0, 160);
 
   const isBreaking = /record|surge|alert|warning|unprecedented|crisis|declared/i.test(cleanTitle);
 
@@ -162,4 +180,14 @@ export function normalizeFeedItem(item: any, source: FeedSource, index: number):
     isBreaking,
     readTimeMinutes,
   };
+}
+
+function validHttpUrl(value: unknown): value is string {
+  if (typeof value !== 'string') return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
 }

@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { Article } from '../../src/types/news';
-import { MOCK_ARTICLES } from '../../src/data/mockArticles';
+import { ENV } from './config/env';
 
-const STORAGE_DIR = path.resolve(process.cwd(), 'data');
+const STORAGE_DIR = ENV.DATA_DIR;
 const STORAGE_FILE = path.join(STORAGE_DIR, 'articles.json');
 
 export interface StoredData {
-  lastUpdated: string;
+  lastUpdated: string | null;
   sourceCount: number;
   totalArticles: number;
   articles: Article[];
@@ -25,27 +25,30 @@ export function getStoredArticles(): StoredData {
     if (fs.existsSync(STORAGE_FILE)) {
       const raw = fs.readFileSync(STORAGE_FILE, 'utf-8');
       const data: StoredData = JSON.parse(raw);
-      if (Array.isArray(data.articles) && data.articles.length > 0) {
+      if (Array.isArray(data.articles)) {
         return data;
       }
+      throw new Error('Article archive has an invalid format');
     }
   } catch (err) {
     console.error('[Storage] Error reading articles cache:', err);
+    throw new Error(`Unable to read article archive: ${err instanceof Error ? err.message : String(err)}`);
   }
 
-  // Fallback to seed articles if empty or unreadable
+  // New installations start empty; mock content must not masquerade as live news.
   return {
-    lastUpdated: new Date().toISOString(),
-    sourceCount: 7,
-    totalArticles: MOCK_ARTICLES.length,
-    articles: MOCK_ARTICLES,
+    lastUpdated: null,
+    sourceCount: 0,
+    totalArticles: 0,
+    articles: [],
   };
 }
 
 /**
- * Atomically writes articles to data/articles.json
+ * Atomically writes articles to data/articles.json. No automatic retention
+ * is applied so useful archive records are not silently discarded.
  */
-export function saveArticles(articles: Article[], sourceCount: number = 7): StoredData {
+export function saveArticles(articles: Article[], sourceCount: number = 0): StoredData {
   try {
     if (!fs.existsSync(STORAGE_DIR)) {
       fs.mkdirSync(STORAGE_DIR, { recursive: true });
@@ -75,6 +78,6 @@ export function saveArticles(articles: Article[], sourceCount: number = 7): Stor
     return data;
   } catch (err) {
     console.error('[Storage] Error saving articles:', err);
-    return getStoredArticles();
+    throw new Error(`Unable to persist article archive: ${err instanceof Error ? err.message : String(err)}`);
   }
 }

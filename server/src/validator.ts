@@ -32,7 +32,10 @@ export function canonicalizeTitle(title: string): string {
  */
 export function isValidArticle(article: Article): boolean {
   if (!article.title || article.title.trim().length < 5) return false;
-  if (!article.articleUrl || !article.articleUrl.startsWith('http')) return false;
+  try {
+    const url = new URL(article.articleUrl);
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') return false;
+  } catch { return false; }
   if (!article.sourceName) return false;
   if (!article.publishedAt || isNaN(new Date(article.publishedAt).getTime())) return false;
   return true;

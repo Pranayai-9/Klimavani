@@ -4,9 +4,10 @@ import { normalizeFeedItem } from './normalizer';
 import { deduplicateArticles } from './validator';
 import { getStoredArticles, saveArticles, StoredData } from './storage';
 import { Article } from '../../src/types/news';
+import { ENV } from './config/env';
 
 const parser = new Parser({
-  timeout: 8000,
+  timeout: ENV.REQUEST_TIMEOUT_MS,
   headers: {
     'User-Agent': 'Klimavani-Climate-Collector/1.0 (+https://github.com/klimavani/klimavani)',
     'Accept': 'application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8',
@@ -23,6 +24,15 @@ export interface CollectionResult {
   errors: Array<{ sourceId: string; sourceName: string; error: string }>;
 }
 
+let activeCollection: Promise<CollectionResult> | null = null;
+let lastAttemptAt: string | null = null;
+let lastSuccessfulAt: string | null = null;
+let lastCollectionResult: CollectionResult | null = null;
+
+export function getCollectionStatus() {
+  return { isCollecting: activeCollection !== null, lastAttemptAt, lastSuccessfulAt, lastResult: lastCollectionResult };
+}
+
 /**
  * Fetches a single feed with timeout and error capture
  */
@@ -31,13 +41,13 @@ async function fetchSourceFeed(source: FeedSource): Promise<{ source: FeedSource
     const feed = await parser.parseURL(source.url);
     const normalized: Article[] = [];
 
-    const rawItems = (feed.items || []).slice(0, 15);
+    const rawItems = (feed.items || []).slice(0, ENV.MAX_ARTICLES_PER_FEED);
     rawItems.forEach((item, index) => {
       try {
         const article = normalizeFeedItem(item, source, index);
         normalized.push(article);
       } catch (err: any) {
-        // Skip individual unparseable item
+        console.warn(`[Collector] Skipping invalid article from ${source.name}:`, err instanceof Error ? err.message : err);
       }
     });
 
@@ -50,7 +60,7 @@ async function fetchSourceFeed(source: FeedSource): Promise<{ source: FeedSource
 /**
  * Runs the collector across all verified sources, deduplicates, and saves to storage
  */
-export async function runCollector(): Promise<CollectionResult> {
+async function collect(): Promise<CollectionResult> {
   const startTime = Date.now();
   console.log(`[Collector] Starting feed collection at ${new Date().toISOString()} across ${VERIFIED_SOURCES.length} sources...`);
 
@@ -76,6 +86,18 @@ export async function runCollector(): Promise<CollectionResult> {
     }
   }
 
+  if (sourcesSucceeded === 0) {
+    return {
+      success: false,
+      timestamp: new Date().toISOString(),
+      sourcesAttempted: VERIFIED_SOURCES.length,
+      sourcesSucceeded: 0,
+      totalCollected: 0,
+      newArticlesCount: 0,
+      errors,
+    };
+  }
+
   // Deduplicate newly collected articles
   const cleanNew = deduplicateArticles(collectedArticles);
 
@@ -90,7 +112,7 @@ export async function runCollector(): Promise<CollectionResult> {
   console.log(`[Collector] Finished in ${elapsed}s. Total stored: ${storedResult.totalArticles} articles (${newCount >= 0 ? '+' + newCount : newCount} new).`);
 
   return {
-    success: true,
+    success: sourcesSucceeded > 0,
     timestamp: new Date().toISOString(),
     sourcesAttempted: VERIFIED_SOURCES.length,
     sourcesSucceeded,
@@ -98,4 +120,17 @@ export async function runCollector(): Promise<CollectionResult> {
     newArticlesCount: Math.max(0, newCount),
     errors,
   };
+}
+
+export function runCollector(): Promise<CollectionResult> {
+  if (activeCollection) return activeCollection;
+  lastAttemptAt = new Date().toISOString();
+  activeCollection = collect()
+    .then((result) => {
+      lastCollectionResult = result;
+      if (result.success) lastSuccessfulAt = result.timestamp;
+      return result;
+    })
+    .finally(() => { activeCollection = null; });
+  return activeCollection;
 }

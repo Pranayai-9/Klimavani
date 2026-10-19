@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ImageOff } from 'lucide-react';
 
 interface ImageWithFallbackProps {
@@ -16,6 +16,11 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
 }) => {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setHasError(false);
+    setIsLoading(Boolean(src));
+  }, [src]);
 
   if (!src || hasError) {
     return (
@@ -47,7 +52,7 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
         src={src}
         alt={alt}
         loading="lazy"
-        onError={() => setHasError(true)}
+        onError={() => { setHasError(true); setIsLoading(false); }}
         onLoad={() => setIsLoading(false)}
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'

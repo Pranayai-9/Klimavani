@@ -18,9 +18,11 @@ export const HomePage: React.FC = () => {
     articles,
     tickerItems,
     isLive,
+    isLoading,
     isRefreshing,
     lastUpdated,
     refreshFeeds,
+    error,
   } = useNewsData();
 
   const {
@@ -72,6 +74,7 @@ export const HomePage: React.FC = () => {
           isRefreshing={isRefreshing}
           onRefresh={refreshFeeds}
           lastUpdated={lastUpdated || undefined}
+          error={error || undefined}
         />
 
         {/* Lead Featured Story (Rendered when we have articles and not in an empty state) */}
@@ -93,6 +96,8 @@ export const HomePage: React.FC = () => {
           }
           searchQuery={searchQuery}
           category={activeCategory}
+          isLoading={isLoading}
+          error={error || undefined}
           onResetFilters={resetFilters}
         />
       </main>

@@ -25,11 +25,11 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
               Climate, Environment & The Changing World
             </p>
             <p className="text-xs text-paper-300/80 leading-relaxed font-sans max-w-md">
-              Klimavani is an independent personal digital climate newspaper designed to bring structure, scientific rigor, and visual clarity to planetary environmental developments. We emphasize verified meteorological datasets, peer-reviewed research, and institutional policy dispatches.
+              Klimavani is an independent digital climate newspaper aggregating verified scientific institutions, meteorological agencies, and environmental journalism. All articles link directly to their original publishers.
             </p>
             <div className="flex items-center gap-2 text-[11px] text-forest-400 font-mono">
               <ShieldCheck className="w-4 h-4 text-forest-300" />
-              <span>Phase 1: Foundation & Editorial Dashboard Prototype</span>
+              <span>Verified Sources · Automatic Collection · No AI Summaries</span>
             </div>
           </div>
 
@@ -56,22 +56,23 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
             </ul>
           </div>
 
-          {/* Sourcing & Phase 2 Pipeline Readiness */}
+          {/* Active Feed Sources */}
           <div className="md:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-forest-300 flex items-center gap-1.5">
               <Database className="w-3.5 h-3.5" />
-              Institutional Sources
+              Active Feed Sources
             </h3>
             <p className="text-xs text-paper-300/80 leading-relaxed font-sans">
-              Configured for direct telemetry and feed ingestion from:
+              Live RSS collection from:
             </p>
             <div className="flex flex-wrap gap-1.5 text-[10px] font-mono text-paper-200">
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">Copernicus C3S</span>
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">WMO / UN</span>
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">NASA Earth</span>
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">ESA Earth Observation</span>
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">Nature & Science</span>
-              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">NOAA Climate</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">NASA Earth Observatory</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">NOAA News</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">ScienceDaily</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">Carbon Brief</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">UN Climate Change</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">Mongabay</span>
+              <span className="bg-forest-900 border border-forest-800 px-2 py-0.5">Phys.org Earth</span>
             </div>
           </div>
         </div>

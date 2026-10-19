@@ -111,23 +111,24 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
               className="w-full h-64 sm:h-80 object-cover"
             />
             <div className="p-2.5 bg-paper-200/80 text-[11px] text-charcoal-800/70 italic flex justify-between items-center border-t border-forest-900/10">
-              <span>Photo context: Environmental observation telemetry and field verification</span>
+              <span>{article.category} · {article.geographicScope || 'Global'}</span>
               <span className="font-sans not-italic font-medium text-forest-900">Source: {article.sourceName}</span>
             </div>
           </div>
 
-          {/* Editorial Lead Teaser */}
+          {/* Source description excerpt, not a direct quotation. */}
           {article.editorialTeaser && (
-            <p className="text-base sm:text-lg font-serif italic text-forest-950/90 leading-relaxed mb-4 border-b border-forest-900/10 pb-4">
-              "{article.editorialTeaser}"
-            </p>
+            <div className="mb-4 border-b border-forest-900/10 pb-4">
+              <p className="text-[10px] uppercase tracking-wider font-semibold text-forest-800 mb-1">From the source description</p>
+              <p className="text-base sm:text-lg font-serif italic text-forest-950/90 leading-relaxed">{article.editorialTeaser}</p>
+            </div>
           )}
 
           {/* Full Summary Description */}
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-charcoal-900 mb-8 font-sans">
             <p>{article.description}</p>
-            <p className="text-charcoal-800/80">
-              Verified monitoring records from {article.sourceName} contribute to consistent, evidence-based climate reporting without speculative extrapolations. Full data series and primary methodologies can be inspected directly at the source publisher.
+            <p className="text-charcoal-800/70 text-sm italic">
+              This summary is drawn directly from the original source. For the complete article, methodology, and data, visit the publisher below.
             </p>
           </div>
 

@@ -45,11 +45,12 @@ export const FeaturedStory: React.FC<FeaturedStoryProps> = ({ article, onOpenArt
               {article.description}
             </p>
 
-            {/* Editorial Teaser Quote */}
+            {/* Source description teaser; this is not a direct quotation. */}
             {article.editorialTeaser && (
-              <blockquote className="border-l-2 border-forest-800 pl-3 py-1 text-xs sm:text-sm font-serif italic text-forest-950/80 mb-6 bg-forest-50/50">
-                "{article.editorialTeaser}"
-              </blockquote>
+              <div className="border-l-2 border-forest-800 pl-3 py-1 mb-6 bg-forest-50/50">
+                <span className="block text-[10px] uppercase tracking-wider font-semibold text-forest-800 mb-1">From the source description</span>
+                <p className="text-xs sm:text-sm font-serif italic text-forest-950/80">{article.editorialTeaser}</p>
+              </div>
             )}
           </div>
 
@@ -101,7 +102,7 @@ export const FeaturedStory: React.FC<FeaturedStoryProps> = ({ article, onOpenArt
             />
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4 flex justify-between items-end text-white text-xs">
               <span className="font-sans font-medium text-paper-200">
-                Environmental Telemetry & Remote Sensing Record
+                {article.category}{article.geographicScope ? ` · ${article.geographicScope}` : ''}
               </span>
               <span className="font-mono text-[11px] opacity-80">
                 Source: {article.sourceName}
