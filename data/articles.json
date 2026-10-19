@@ -1,10 +1,26 @@
 {
-  "lastUpdated": "2026-10-19T09:29:31.953Z",
+  "lastUpdated": "2026-10-19T10:59:31.482Z",
   "sourceCount": 6,
-  "totalArticles": 132,
+  "totalArticles": 133,
   "articles": [
     {
-      "id": "art-phys-earth-mvf1z2kp-0",
+      "id": "art-phys-earth-mvf56th4-0",
+      "title": "Nations seek reset at UN talks as nature goals off track",
+      "originalHeadline": "Nations seek reset at UN talks as nature goals off track",
+      "description": "Nearly 200 nations are gathering in Armenia on Monday for critical negotiations as governments come under pressure to salvage a landmark nature pact whose goals are slipping out of reach.",
+      "editorialTeaser": "Nearly 200 nations are gathering in Armenia on Monday for critical negotiations as governments come under pressure to salvage a landmark nature pact whose goals are slipping out of reach.",
+      "sourceName": "Phys.org Earth & Environment",
+      "sourceUrl": "https://phys.org",
+      "articleUrl": "https://phys.org/news/2026-10-nations-reset-nature-goals-track.html",
+      "publishedAt": "2026-10-19T09:40:01.000Z",
+      "category": "Research",
+      "geographicScope": "Global",
+      "isFeatured": false,
+      "isBreaking": false,
+      "readTimeMinutes": 3
+    },
+    {
+      "id": "art-phys-earth-mvf56th4-1",
       "title": "Factoring daily weather extremes into glacier models reveals greater ice loss and faster sea-level rise",
       "originalHeadline": "Factoring daily weather extremes into glacier models reveals greater ice loss and faster sea-level rise",
       "description": "A new study led by researchers at ETH Zurich (Switzerland) and the Vrije Universiteit Brussel (Belgium) reveals that glaciers worldwide could lose ice faster than previously projected. Published in Nature Communications, the research shows that accounting for daily weather variab...",
@@ -20,7 +36,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kp-1",
+      "id": "art-phys-earth-mvf56th4-2",
       "title": "Record El Niño? Depends who's counting",
       "originalHeadline": "Record El Niño? Depends who's counting",
       "description": "Britain's Met Office says this year's El Niño is \"unprecedented.\" Japan's weather agency has called it the strongest ever observed. U.S. forecasters say it still trails the biggest events in its record books.",
@@ -36,7 +52,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-0",
+      "id": "art-mongabay-mvf56sn6-0",
       "title": "Farmworkers’ health matters: South Africa looks to alternatives for chemical pesticides",
       "originalHeadline": "Farmworkers’ health matters: South Africa looks to alternatives for chemical pesticides",
       "description": "Insects like fall armyworm or mealybugs can decimate food and commercial crops; like their counterparts elsewhere in the world, South Africa’s small and large farmers alike use synthetic chemical pesticides to control these and other pests. But about 385 million cases of unintent...",
@@ -53,7 +69,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-1",
+      "id": "art-mongabay-mvf56sn7-1",
       "title": "Funding uncertainty threatens Tasmania’s gains against kelp-grazing sea urchins",
       "originalHeadline": "Funding uncertainty threatens Tasmania’s gains against kelp-grazing sea urchins",
       "description": "For nearly a decade, divers off Tasmania’s east coast have been getting a boost from the government to harvest the invasive sea urchins killing off kelp forests that fringe the Australian island state. A state program offers financial incentives to support a commercial fishery fo...",
@@ -70,7 +86,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kp-2",
+      "id": "art-phys-earth-mvf56th4-3",
       "title": "Warming could help make the Indian Ocean a stronger climate buffer",
       "originalHeadline": "Warming could help make the Indian Ocean a stronger climate buffer",
       "description": "The world's oceans help slow climate change by absorbing carbon dioxide (CO₂) from the atmosphere, but how much they take up can vary throughout the year. New research, published in Geophysical Research Letters, suggests these seasonal patterns are changing across the Indian Ocea...",
@@ -86,7 +102,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-0",
+      "id": "art-sciencedaily-climate-mvf56tjp-0",
       "title": "Scientists discover a surprising twist in Japan's 7,300-year-old volcanic apocalypse",
       "originalHeadline": "Scientists discover a surprising twist in Japan's 7,300-year-old volcanic apocalypse",
       "description": "A catastrophic volcanic eruption 7,300 years ago devastated Japan, but new research reveals that its impact on prehistoric populations was far more complex than previously believed. While some communities disappeared or declined, others unexpectedly flourished as survivors migrat...",
@@ -102,7 +118,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-1",
+      "id": "art-sciencedaily-climate-mvf56tjp-1",
       "title": "NASA discovers hidden fires burning beneath the Amazon rainforest",
       "originalHeadline": "NASA discovers hidden fires burning beneath the Amazon rainforest",
       "description": "El Niño is fueling a dangerous cascade of wildfires across the tropics, with the Amazon rainforest now experiencing widespread burning and scientists warning that the worst may still be ahead. NASA researchers are uncovering dozens of previously undetected fires, suggesting the d...",
@@ -118,7 +134,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-2",
+      "id": "art-mongabay-mvf56sn7-2",
       "title": "Nearly 90% of countries adopt biodiversity targets, but most remain off track",
       "originalHeadline": "Nearly 90% of countries adopt biodiversity targets, but most remain off track",
       "description": "Thousands of delegates are now gathering in Yerevan to discuss the future of life on Earth as we know it at the U.N.’s COP17 biodiversity summit. Countries have made considerable progress in developing national conservation plans under the biodiversity framework agreed to at COP1...",
@@ -135,7 +151,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-3",
+      "id": "art-phys-earth-mvf56th4-4",
       "title": "What an ancient volcanic eruption teaches us about resilience today",
       "originalHeadline": "What an ancient volcanic eruption teaches us about resilience today",
       "description": "When a massive environmental disaster strikes, do societies simply collapse and disappear? Or do people find a way to adapt, rebuild and recover?",
@@ -151,7 +167,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-3",
+      "id": "art-mongabay-mvf56sn7-3",
       "title": "Nigeria drove thousands of gold miners from a national park. But can it keep them out?",
       "originalHeadline": "Nigeria drove thousands of gold miners from a national park. But can it keep them out?",
       "description": "A military-backed operation shut down a major illegal gold mining site in Gashaka-Gumti National Park, driving more than 4,000 miners from Nigeria’s largest national park, according to the Africa Nature Investors Foundation (ANI). The miners had already fled by the time Nigerian ...",
@@ -168,7 +184,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-4",
+      "id": "art-phys-earth-mvf56th4-5",
       "title": "The ambiguous costs of climate change",
       "originalHeadline": "The ambiguous costs of climate change",
       "description": "As human activity has increased temperatures globally, determining the costs directly incurred by climate change is challenging. The effects of climate change on extreme weather events—such as hurricanes and heat waves—can be locally specific and variable, and observations and cl...",
@@ -184,7 +200,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z201-0",
+      "id": "art-un-climate-mvf56smb-0",
       "title": "COP17: The world has a plan to save nature. Is it working?",
       "originalHeadline": "COP17: The world has a plan to save nature. Is it working?",
       "description": "The UN Secretary-General has called for an end to the “war on nature”. On Monday, governments gathering in Yerevan, Armenia, will have to confront a more practical question: are they doing enough to win the peace and put the world’s biodiversity goals back on track?",
@@ -201,7 +217,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-5",
+      "id": "art-sciencedaily-climate-mvf56tjq-5",
       "title": "A 24-year study uncovers a surprising climate benefit beneath forests",
       "originalHeadline": "A 24-year study uncovers a surprising climate benefit beneath forests",
       "description": "Scientists have discovered that some forest soils are becoming surprisingly better at removing methane from the atmosphere as temperatures rise and rainfall declines. A study spanning up to 24 years found methane absorption increasing by an average of 3% annually, challenging pre...",
@@ -217,7 +233,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-5",
+      "id": "art-phys-earth-mvf56th4-6",
       "title": "During El Niño, a perfect storm of weather systems could spell disaster for the Great Barrier Reef",
       "originalHeadline": "During El Niño, a perfect storm of weather systems could spell disaster for the Great Barrier Reef",
       "description": "The strong El Niño currently under way in the Pacific Ocean raises the specter of marine heat waves and coral bleaching once again threatening Australia's iconic Great Barrier Reef. And now new research has revealed the complex interplay of atmospheric patterns and weather system...",
@@ -233,7 +249,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-4",
+      "id": "art-mongabay-mvf56sn7-4",
       "title": "Indonesian women cash in on mangrove restoration: Interview with community leader Wisye Sahambangung",
       "originalHeadline": "Indonesian women cash in on mangrove restoration: Interview with community leader Wisye Sahambangung",
       "description": "JAKARTA — Wisye Sahambangung is a fisher, community leader, and mangrove conservationist from Sarawet, a coastal Indonesian village in North Sulawesi province. Since 2022, the 45-year-old has led Rhizopora, a women’s group that restores mangroves and helps create economic opportu...",
@@ -250,7 +266,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-5",
+      "id": "art-mongabay-mvf56sn7-5",
       "title": "This orca destroyed a sunfish and no one is sure why",
       "originalHeadline": "This orca destroyed a sunfish and no one is sure why",
       "description": "Scientists, on two separate occasions, have observed orcas ramming into heavy sunfish with such force that the boney fish literally explodes. But why? Scientists, at least currently, have no idea. They could be doing it to portion of food to feed the pod. Or they might just be do...",
@@ -267,7 +283,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-6",
+      "id": "art-mongabay-mvf56sn7-6",
       "title": "Amazon deforestation falls 42% to a record low",
       "originalHeadline": "Amazon deforestation falls 42% to a record low",
       "description": "Deforestation in the Brazilian Amazon has fallen to the lowest level on record. Data released today by Brazil’s national space research institute, INPE, shows that forest clearing in Earth’s largest rainforest over the 12 months ended July 31, 2026, amounted to 3,335 square kilom...",
@@ -284,7 +300,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-6",
+      "id": "art-phys-earth-mvf56th5-7",
       "title": "Wider approach needed to mitigate rising rechargeable battery emissions",
       "originalHeadline": "Wider approach needed to mitigate rising rechargeable battery emissions",
       "description": "A new University of Melbourne-led study has identified insights and evidence that could help mitigate the fast-rising climate impact of lithium-ion batteries (LIBs).",
@@ -300,7 +316,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-7",
+      "id": "art-phys-earth-mvf56th5-8",
       "title": "About 2% of natural gas supplied to a Midwest city leaks into the atmosphere",
       "originalHeadline": "About 2% of natural gas supplied to a Midwest city leaks into the atmosphere",
       "description": "Most natural gas leakage in Indianapolis likely originates from homes and other buildings, not exterior pipelines and large-scale distribution infrastructure that deliver the fossil fuel, according to Penn State researchers who assessed nearly a decade of data.",
@@ -316,7 +332,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i5-7",
+      "id": "art-mongabay-mvf56sn7-7",
       "title": "The uplifting story of one of Zimbabwe’s pioneering women rangers",
       "originalHeadline": "The uplifting story of one of Zimbabwe’s pioneering women rangers",
       "description": "For Nyaradzo Auxilia Hoto, one of the most memorable moments of becoming a wildlife ranger was a trip to town. She and her fellow recruits walked through the streets in their new uniforms, on their way to open bank accounts. Soon, they would receive their first salaries. For a wo...",
@@ -333,7 +349,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-8",
+      "id": "art-phys-earth-mvf56th5-9",
       "title": "Supercooled clouds over the highest mountains respond differently to climate change",
       "originalHeadline": "Supercooled clouds over the highest mountains respond differently to climate change",
       "description": "Most studies of how clouds are responding to climate change focus on clouds over the oceans, rather than over mountains. Those that do focus on mountain clouds tend to explore cloud microphysics rather than long-term trends in cloud phase. But understanding cloud behavior over re...",
@@ -349,7 +365,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-8",
+      "id": "art-mongabay-mvf56sn7-8",
       "title": "Fundraising to protect oceans, forests and other key nature sites falling short ahead of UN summit",
       "originalHeadline": "Fundraising to protect oceans, forests and other key nature sites falling short ahead of UN summit",
       "description": "Promises by nations to spend hundreds of billions of dollars to finance nature and increase protections for oceans around the globe are falling short ahead of a key U.N. biodiversity conference. The warnings from the head of the conference and environmental groups comes as the co...",
@@ -366,7 +382,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-9",
+      "id": "art-phys-earth-mvf56th5-10",
       "title": "Forecasting 'tipping points' with AI climate simulation",
       "originalHeadline": "Forecasting 'tipping points' with AI climate simulation",
       "description": "The writer Malcolm Gladwell popularized the term \"tipping points\" to refer to the moment when a trend or social behavior crosses a threshold and rapidly spreads everywhere. In physics, tipping points occur when systems—say, Earth's climate—reach an unstable point and topple over ...",
@@ -382,7 +398,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-10",
+      "id": "art-phys-earth-mvf56th5-11",
       "title": "Wetland reclamation brings limited agricultural gains but high flood exposure",
       "originalHeadline": "Wetland reclamation brings limited agricultural gains but high flood exposure",
       "description": "Wetland reclamation has long been regarded as a strategy to meet growing food demand, given the favorable soil and water conditions of wetlands. However, the trade-off between potentially greater crop production and the ecological cost of lost wetlands—especially involving flood ...",
@@ -398,7 +414,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-11",
+      "id": "art-phys-earth-mvf56th5-12",
       "title": "'Excess oxygen' stored in deep Earth magma may help explain how Earth's atmosphere became oxygen-rich",
       "originalHeadline": "'Excess oxygen' stored in deep Earth magma may help explain how Earth's atmosphere became oxygen-rich",
       "description": "A research team has found that molten rock can carry more oxygen than its chemical composition would seem to allow. Their study is published in National Science Review.",
@@ -414,7 +430,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-12",
+      "id": "art-phys-earth-mvf56th5-13",
       "title": "NASA satellites observe historic 2026 El Niño",
       "originalHeadline": "NASA satellites observe historic 2026 El Niño",
       "description": "A phenomenon rarer than a solar eclipse and more powerful than any single storm system is unfolding this fall, and NASA is tracking it closely.",
@@ -430,7 +446,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-phys-earth-mvf1z2kq-13",
+      "id": "art-phys-earth-mvf56th5-14",
       "title": "Matching wastewater treatment to local demand could help China tackle water scarcity",
       "originalHeadline": "Matching wastewater treatment to local demand could help China tackle water scarcity",
       "description": "Wastewater reclamation is increasingly regarded as an alternative water source to mitigate water scarcity in China. However, expanding wastewater treatment capacity alone may not be enough to ease this scarcity, since wastewater supply, treatment facilities and reuse demand are n...",
@@ -446,7 +462,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-9",
+      "id": "art-mongabay-mvf56sn7-9",
       "title": "Legal gaps allow rampant pet trade, poaching reptiles and amphibians towards extinction",
       "originalHeadline": "Legal gaps allow rampant pet trade, poaching reptiles and amphibians towards extinction",
       "description": "Spain’s law enforcement agency, the Civil Guard, announced on Sept. 25, 2026, that it seized 209 reptiles from breeding facilities in Jérica and Sot de Ferrer (Castellón), including critically endangered iguanas endemic to Fiji. Nearly half of the reptiles were protected under CI...",
@@ -463,7 +479,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-10",
+      "id": "art-mongabay-mvf56sn7-10",
       "title": "Plastic industry bookkeeping plans hide chemical recycling harms, critics say",
       "originalHeadline": "Plastic industry bookkeeping plans hide chemical recycling harms, critics say",
       "description": "Plastic pollution has rapidly escalated into a global environmental crisis that threatens ecosystem function and human health at an epic scale. Solutions are urgently needed, but while scientists, conservationists and more than 75 nations have called for binding limits on fossil ...",
@@ -480,7 +496,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-11",
+      "id": "art-mongabay-mvf56sn7-11",
       "title": "As US states reduce recently restored wolf populations, here’s what we risk losing (commentary)",
       "originalHeadline": "As US states reduce recently restored wolf populations, here’s what we risk losing (commentary)",
       "description": "For centuries, wolves have been cast as vicious, bloodthirsty creatures of nightmares and fairy tales, rather than as deeply social animals with an important place in nature. We wanted to understand the animal behind those stories. So, in the 1990s, we spent six years living alon...",
@@ -513,7 +529,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-12",
+      "id": "art-mongabay-mvf56sn7-12",
       "title": "‘Enclosed river:’ Women shellfish gatherers fight for access to mangroves in Brazil",
       "originalHeadline": "‘Enclosed river:’ Women shellfish gatherers fight for access to mangroves in Brazil",
       "description": "Adriana Hora dos Santos stands waist-deep in the water. Her dark hair is tied in a single braid; her arms and torso covered by a pink Lycra shirt. The thick mangrove mud reaches her thighs. Using a machete just over 40-centimeters (16-inches) long, she pries dozens of oysters fro...",
@@ -530,7 +546,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-13",
+      "id": "art-mongabay-mvf56sn7-13",
       "title": "Saving big cats: Storytelling duo Steve Winter & Sharon Guynup publish new book",
       "originalHeadline": "Saving big cats: Storytelling duo Steve Winter & Sharon Guynup publish new book",
       "description": "For more than two decades, National Geographic photographer Steve Winter and environmental journalist Sharon Guynup have followed big cats into some of Earth’s wildest, most dangerous places. Their work has taken them from the jungles of India and Brazil to the high Himalaya, fro...",
@@ -547,7 +563,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-mongabay-mvf1z2i6-14",
+      "id": "art-mongabay-mvf56sn7-14",
       "title": "Celebrity shark trapped in South Korean canal stirs concerns over warming seas",
       "originalHeadline": "Celebrity shark trapped in South Korean canal stirs concerns over warming seas",
       "description": "SEOUL — Wedged between skyscrapers and a bustling passenger ferry port in Busan, South Korea’s second-largest city, a celebrity of sorts is drawing thousands of admirers as it has been swimming for weeks now in a shallow city canal. Bukangi, a shark named after the waterfront par...",
@@ -644,7 +660,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z201-1",
+      "id": "art-un-climate-mvf56smb-1",
       "title": "As disasters mount, next UN climate summit faces a test of trust",
       "originalHeadline": "As disasters mount, next UN climate summit faces a test of trust",
       "description": "Less than a month before the UN climate conference COP31 opens in Antalya, Türkiye, representatives of three successive summit presidencies gathered to address a pressing question: How can the world restore trust in climate action when the consequences of a warming planet are alr...",
@@ -661,7 +677,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z201-2",
+      "id": "art-un-climate-mvf56smb-2",
       "title": "Guterres urges faster action and financing to stop biodiversity loss",
       "originalHeadline": "Guterres urges faster action and financing to stop biodiversity loss",
       "description": "The United Nations Secretary-General appealed on Friday for governments, businesses and communities to accelerate efforts to protect biodiversity for future generations and all life on Earth.",
@@ -678,7 +694,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-0",
+      "id": "art-carbon-brief-mvf56sqy-0",
       "title": "COP17: Which countries have released new pledges to tackle nature loss?",
       "originalHeadline": "COP17: Which countries have released new pledges to tackle nature loss?",
       "description": "Some 58% of countries have met a UN call to submit new pledges on addressing nature loss – two years… The post COP17: Which countries have released new pledges to tackle nature loss? appeared first on Carbon Brief.",
@@ -695,7 +711,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-6",
+      "id": "art-sciencedaily-climate-mvf56tjq-6",
       "title": "Scientists discover a plastic-eating “Pac-Man” enzyme with a surprising secret",
       "originalHeadline": "Scientists discover a plastic-eating “Pac-Man” enzyme with a surprising secret",
       "description": "Scientists have discovered a remarkable “Pac-Man enzyme” that helps bacteria devour certain types of plastic and may offer new hope in the fight against plastic pollution. Researchers found that several biodegradable plastics completely broke down in soil within about a year, whi...",
@@ -795,7 +811,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-4",
+      "id": "art-sciencedaily-climate-mvf56tjq-4",
       "title": "NASA captures strange waves high above Hurricane Simon",
       "originalHeadline": "NASA captures strange waves high above Hurricane Simon",
       "description": "As Hurricane Simon unleashed destructive winds and flooding along Mexico’s coast, NASA satellites captured an extraordinary sight: massive atmospheric waves rippling high above the storm. The rare images reveal how powerful hurricanes can disturb the upper atmosphere, creating pa...",
@@ -811,7 +827,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-3",
+      "id": "art-sciencedaily-climate-mvf56tjq-3",
       "title": "Antarctica’s sea ice has undergone a stunning reversal",
       "originalHeadline": "Antarctica’s sea ice has undergone a stunning reversal",
       "description": "Antarctic sea ice reached its third-lowest winter maximum in 2026, extending a remarkable decline that began after years of record-breaking growth. Scientists are investigating whether the dramatic reversal signals a long-term shift in Antarctica's frozen landscape.",
@@ -861,7 +877,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-1",
+      "id": "art-carbon-brief-mvf56sqy-1",
       "title": "COP17: Tracking progress towards the UN’s 2030 nature targets",
       "originalHeadline": "COP17: Tracking progress towards the UN’s 2030 nature targets",
       "description": "Countries will meet in Armenia this month to carry out the first global review of progress towards meeting key nature… The post COP17: Tracking progress towards the UN’s 2030 nature targets appeared first on Carbon Brief.",
@@ -877,7 +893,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-2",
+      "id": "art-carbon-brief-mvf56sqy-2",
       "title": "COP17: Developed countries ‘fall far short’ of UN targets for nature finance",
       "originalHeadline": "COP17: Developed countries ‘fall far short’ of UN targets for nature finance",
       "description": "The amount of finance for nature delivered to date “falls far short” of what is needed to meet the UN’s… The post COP17: Developed countries ‘fall far short’ of UN targets for nature finance appeared first on Carbon Brief.",
@@ -911,7 +927,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z201-3",
+      "id": "art-un-climate-mvf56smb-3",
       "title": "The world is waging a ‘war on nature’ as progress on biodiversity targets lags",
       "originalHeadline": "The world is waging a ‘war on nature’ as progress on biodiversity targets lags",
       "description": "Fewer than half of the national targets set to protect the world’s plants, animals and ecosystems are on track, the UN warns in a new report, days before countries gather in Yerevan, Armenia, for the COP17 biodiversity conference.",
@@ -928,7 +944,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-7",
+      "id": "art-sciencedaily-climate-mvf56tjq-7",
       "title": "A fungus is threatening the world’s food supply. Scientists just found a new defense",
       "originalHeadline": "A fungus is threatening the world’s food supply. Scientists just found a new defense",
       "description": "Scientists have discovered a potential new weapon against a devastating fungus that threatens rice, wheat, and barley worldwide. By engineering a special type of plant immune receptor, researchers created defenses capable of recognizing multiple fungal threats at once. The breakt...",
@@ -944,7 +960,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-2",
+      "id": "art-sciencedaily-climate-mvf56tjp-2",
       "title": "Arctic sea ice hits another troubling low in 2026",
       "originalHeadline": "Arctic sea ice hits another troubling low in 2026",
       "description": "Arctic sea ice is shrinking in both winter and summer, with satellite records revealing that the region's remaining ice is becoming thinner, younger, and more vulnerable to melting. Despite a recent slowdown in summer losses, scientists warn that the Arctic could experience a nea...",
@@ -1198,7 +1214,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2kw-0",
+      "id": "art-noaa-news-mvf56t4i-0",
       "title": "El Nino looms large over U.S. Winter Outlook",
       "originalHeadline": "El Nino looms large over U.S. Winter Outlook",
       "description": "El Nino looms large over U.S. Winter Outlook Expected impacts include warmer North, wetter South and East October 15, 2026 A car drives through a snowstorm in Broomfield, Colorado, in 2024. (Image credit: Bob Hyatt/NOAA) Download Image NOAA’s U.S. Winter Outlook, released today, ...",
@@ -1249,7 +1265,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2kx-1",
+      "id": "art-noaa-news-mvf56t4j-1",
       "title": "Ocean Facts: What are Kelvin waves?",
       "originalHeadline": "Ocean Facts: What are Kelvin waves?",
       "description": "Ocean Facts: What are Kelvin waves? Kelvin waves are difficult to see with the naked eye as they are large in scale, slow moving, and don't break onshore like typical ocean waves. In this graphic, satellite radar altimetry measurements reveal the sea surface signature of Kelvin w...",
@@ -1300,7 +1316,7 @@
       "readTimeMinutes": 7
     },
     {
-      "id": "art-noaa-news-mvf1z2kx-2",
+      "id": "art-noaa-news-mvf56t4j-2",
       "title": "Aerial images of damage from #Isaias now available online",
       "originalHeadline": "Aerial images of damage from #Isaias now available online",
       "description": "Aerial images of damage from #Isaias now available online An aerial view of Pensacola, Florida, collected by NOAA aircraft on October 11, 2026, after Hurricane Isaias passed through. (Image credit: NOAA NGS) Download Image October 13, 2026 Ocean & Coasts Marine & Aviation aerial ...",
@@ -1351,7 +1367,7 @@
       "readTimeMinutes": 6
     },
     {
-      "id": "art-un-climate-mvf1z201-4",
+      "id": "art-un-climate-mvf56smb-4",
       "title": "Disasters cost $228 billion in housing losses every year",
       "originalHeadline": "Disasters cost $228 billion in housing losses every year",
       "description": "$228 billion is a staggering amount of money to find, but that’s exactly what communities around the world are faced with every year, to rebuild housing after disaster strikes.",
@@ -1368,7 +1384,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-9",
+      "id": "art-sciencedaily-climate-mvf56tjq-9",
       "title": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
       "originalHeadline": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
       "description": "Europe's Sentinel-3C satellite has returned breathtaking images of Earth just two weeks after launch, revealing the snowy Alps, frozen Arctic islands, and brilliant turquoise Caribbean waters. Its first measurements also show promising results for tracking rising seas, melting ic...",
@@ -1384,7 +1400,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-8",
+      "id": "art-sciencedaily-climate-mvf56tjq-8",
       "title": "Scientists uncover the 2.3-billion-year-old secret that helped keep Earth habitable",
       "originalHeadline": "Scientists uncover the 2.3-billion-year-old secret that helped keep Earth habitable",
       "description": "Scientists may have solved a 2.3-billion-year-old mystery about how Earth maintained enough oxygen to support life. Ancient rocks reveal that phosphorus recycling in the oceans created a self-sustaining cycle that helped keep oxygen levels high, even as the planet underwent drama...",
@@ -1417,7 +1433,7 @@
       "readTimeMinutes": 5
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-3",
+      "id": "art-carbon-brief-mvf56sqy-3",
       "title": "Interactive: Tracking negotiating texts at the COP17 biodiversity summit",
       "originalHeadline": "Interactive: Tracking negotiating texts at the COP17 biodiversity summit",
       "description": "Next week, diplomats from around the world will descend on Yerevan, Armenia, to negotiate a series of decisions under the… The post Interactive: Tracking negotiating texts at the COP17 biodiversity summit appeared first on Carbon Brief.",
@@ -1451,7 +1467,7 @@
       "readTimeMinutes": 6
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-10",
+      "id": "art-sciencedaily-climate-mvf56tjq-10",
       "title": "NASA captures a stunning transformation in Australia's red outback",
       "originalHeadline": "NASA captures a stunning transformation in Australia's red outback",
       "description": "Australia's normally dry, rust-colored outback has erupted into a spectacular carpet of wildflowers after unusually heavy rains, potentially producing its most impressive bloom in nearly 20 years. NASA satellite images capture the stunning transformation, which has even brought r...",
@@ -1467,7 +1483,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-11",
+      "id": "art-sciencedaily-climate-mvf56tjq-11",
       "title": "NASA spots a giant patch of Moon-like rock on Earth",
       "originalHeadline": "NASA spots a giant patch of Moon-like rock on Earth",
       "description": "An astronaut aboard the International Space Station photographed a remarkable formation in Madagascar that looks surprisingly similar to the Moon’s bright highlands. Made of anorthosite, a rock abundant on the lunar surface, the formation dates back at least 600 million years and...",
@@ -1517,7 +1533,7 @@
       "readTimeMinutes": 4
     },
     {
-      "id": "art-un-climate-mvf1z201-5",
+      "id": "art-un-climate-mvf56smb-5",
       "title": "In the Mekong Delta, a push to grow food with saltwater",
       "originalHeadline": "In the Mekong Delta, a push to grow food with saltwater",
       "description": "For generations, farming in Viet Nam’s Mekong Delta has depended on a delicate bargain. The river flooded, retreated and flooded again, carrying freshwater and sediment across a flat landscape whose vast fields helped turn the country into one of the world’s leading rice exporter...",
@@ -1551,7 +1567,7 @@
       "readTimeMinutes": 5
     },
     {
-      "id": "art-un-climate-mvf1z201-6",
+      "id": "art-un-climate-mvf56smb-6",
       "title": "Amid heartache of Nepal flooding disaster, fear remains",
       "originalHeadline": "Amid heartache of Nepal flooding disaster, fear remains",
       "description": "Six weeks after Nepal’s deadly flooding disaster, communities are still struggling to rebuild their lives, but they will need sustained help as global warming increases the risk of another Himalayan catastrophe, the UN Children’s Fund (UNICEF) said on Friday.",
@@ -1568,7 +1584,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-4",
+      "id": "art-carbon-brief-mvf56sqy-4",
       "title": "Factcheck: UK Conservatives double the ‘cost of net-zero’ after spreadsheet blunder",
       "originalHeadline": "Factcheck: UK Conservatives double the ‘cost of net-zero’ after spreadsheet blunder",
       "description": "A booklet published by the UK’s opposition Conservative party includes a “cost of net-zero” that appears to have been doubled… The post Factcheck: UK Conservatives double the ‘cost of net-zero’ after spreadsheet blunder appeared first on Carbon Brief.",
@@ -1585,7 +1601,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2kx-3",
+      "id": "art-noaa-news-mvf56t4k-3",
       "title": "Saildrone research fleet to circle Antarctica for 5 years",
       "originalHeadline": "Saildrone research fleet to circle Antarctica for 5 years",
       "description": "Saildrone research fleet to circle Antarctica for 5 years NOAA and partners to test limits of technology and science A Saildrone uncrewed surface vehicle is towed out of the Australian port of Hobart, Tasmania, before being released into the Southern Ocean to collect vital oceano...",
@@ -1602,7 +1618,7 @@
       "readTimeMinutes": 18
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-12",
+      "id": "art-sciencedaily-climate-mvf56tjq-12",
       "title": "This “golden tree” coral was too strange for any known family",
       "originalHeadline": "This “golden tree” coral was too strange for any known family",
       "description": "A brilliant yellow coral discovered off Costa Rica proved so unusual that scientists had to create an entirely new family to classify it. The meter-tall colonies rise from seafloors covered in brittle stars, inspiring the Tolkien-inspired name Laurinque elenya, or “golden tree of...",
@@ -1618,7 +1634,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z201-7",
+      "id": "art-un-climate-mvf56smb-7",
       "title": "‘Overshoot is not a reason to surrender’: UN calls for accelerated climate action ahead of COP31 summit",
       "originalHeadline": "‘Overshoot is not a reason to surrender’: UN calls for accelerated climate action ahead of COP31 summit",
       "description": "As world leaders prepare for November’s major COP31 climate summit in Türkiye, record-breaking heat, devastating floods and an unprecedented El Niño climate pattern are making global climate action ever more urgent.",
@@ -1635,7 +1651,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vg-13",
+      "id": "art-sciencedaily-climate-mvf56tjq-13",
       "title": "Earth’s center is moving, and NASA just measured it",
       "originalHeadline": "Earth’s center is moving, and NASA just measured it",
       "description": "Earth’s center of mass is constantly on the move, shifting by a few millimeters as enormous amounts of water, ice, and even air migrate around the planet with the seasons. NASA scientists have developed a more precise way to track these tiny swings using laser-ranging satellites,...",
@@ -1651,7 +1667,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-sciencedaily-climate-mvf1z2vh-14",
+      "id": "art-sciencedaily-climate-mvf56tjq-14",
       "title": "Animals may have evolved 200 million years earlier than we thought",
       "originalHeadline": "Animals may have evolved 200 million years earlier than we thought",
       "description": "New research suggests animals could have evolved as early as 800 to 700 million years ago, roughly 200 million years earlier than some previous estimates. If so, the first animals may have lived before or during Snowball Earth, leaving behind little trace because their soft bodie...",
@@ -1667,7 +1683,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-8",
+      "id": "art-un-climate-mvf56smb-8",
       "title": "From drought to deluge: ‘Super’ El Niño’s expanding reach",
       "originalHeadline": "From drought to deluge: ‘Super’ El Niño’s expanding reach",
       "description": "Across Papua New Guinea, water sources are drying up, crops are failing and food prices are rising months before the worst agricultural impacts are expected. Behind those warning signs is an El Niño whose Pacific Ocean temperatures have already surpassed the equivalent measuremen...",
@@ -1684,7 +1700,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2kx-4",
+      "id": "art-noaa-news-mvf56t4m-4",
       "title": "Large-scale marine debris: 4 ways to clean up the big stuff",
       "originalHeadline": "Large-scale marine debris: 4 ways to clean up the big stuff",
       "description": "Large-scale marine debris: 4 ways to clean up the big stuff How do you address oversized pollution in the ocean and Great Lakes? A freediver from the Papahānaumokuākea Marine Debris Project works to carefully remove a ghost net from the reef at Kamokuokamohoali‘i (Maro Reef) in H...",
@@ -1701,7 +1717,7 @@
       "readTimeMinutes": 20
     },
     {
-      "id": "art-noaa-news-mvf1z2kx-5",
+      "id": "art-noaa-news-mvf56t4n-5",
       "title": "NOAA to issue 2026-2027 U.S. Winter Outlook October 15",
       "originalHeadline": "NOAA to issue 2026-2027 U.S. Winter Outlook October 15",
       "description": "NOAA to issue 2026-2027 U.S. Winter Outlook October 15 October 8, 2026 A car drives through a snowstorm in Broomfield, Colorado, in 2024. (Image credit: Bob Hyatt/NOAA) Download Image On Thursday, October 15, NOAA’s National Weather Service will announce the U.S. Winter Outlook f...",
@@ -1718,7 +1734,7 @@
       "readTimeMinutes": 5
     },
     {
-      "id": "art-un-climate-mvf1z202-9",
+      "id": "art-un-climate-mvf56smb-9",
       "title": "Security, sacrifice or opportunity: Visions differ over effective climate action",
       "originalHeadline": "Security, sacrifice or opportunity: Visions differ over effective climate action",
       "description": "Should the world move away sharply from fossil fuels, or manage a slower, more careful retreat?",
@@ -1735,7 +1751,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-10",
+      "id": "art-un-climate-mvf56smb-10",
       "title": "Extreme heat making pregnancy a ‘new fault line’ in climate crisis",
       "originalHeadline": "Extreme heat making pregnancy a ‘new fault line’ in climate crisis",
       "description": "Pregnancy and childbirth have become a “new fault line in the global climate crisis” as extreme heat worsens, the head of the UN climate action body (UNFCCC) warned on Monday, calling for maternal and newborn health to be built into countries’ climate plans.",
@@ -1768,7 +1784,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-11",
+      "id": "art-un-climate-mvf56smb-11",
       "title": "‘He felt heard’: How a film brought a UN report to life in Xochimilco",
       "originalHeadline": "‘He felt heard’: How a film brought a UN report to life in Xochimilco",
       "description": "A documentary drawn from United Nations University research was screened at the COP30 climate conference and film festivals across Europe. Its most important journey, though, was the one back to the Mexico City canals where it was filmed.",
@@ -1817,7 +1833,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-12",
+      "id": "art-un-climate-mvf56smb-12",
       "title": "Rotting food waste emits 5 times more greenhouse gases than planes",
       "originalHeadline": "Rotting food waste emits 5 times more greenhouse gases than planes",
       "description": "Rotting food waste is causing up to 10 per cent of total global greenhouse gas emissions – five times more than the entire aviation sector, the UN’s environment agency warned this week.",
@@ -1834,7 +1850,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-13",
+      "id": "art-un-climate-mvf56smb-13",
       "title": "Uganda’s UN-supported wildlife forensics lab turns ivory seizures into convictions",
       "originalHeadline": "Uganda’s UN-supported wildlife forensics lab turns ivory seizures into convictions",
       "description": "The package originated in Entebbe, Uganda, bound for Cairo, containing 10 kilograms of thumb-sized pieces that could have been either bone or elephant ivory.",
@@ -1883,7 +1899,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-5",
+      "id": "art-carbon-brief-mvf56sqy-5",
       "title": "Analysis: Wind and solar save UK from gas imports worth £5.9bn during Hormuz crisis",
       "originalHeadline": "Analysis: Wind and solar save UK from gas imports worth £5.9bn during Hormuz crisis",
       "description": "The UK has avoided the need for gas imports worth £5.9bn since the start of the Hormuz crisis as a… The post Analysis: Wind and solar save UK from gas imports worth £5.9bn during Hormuz crisis appeared first on Carbon Brief.",
@@ -1900,7 +1916,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2ky-6",
+      "id": "art-noaa-news-mvf56t4n-6",
       "title": "Olive ridley sea turtles nest in California for the first time",
       "originalHeadline": "Olive ridley sea turtles nest in California for the first time",
       "description": "Olive ridley sea turtles nest in California for the first time (Image credit: Huntington Beach Fire Department) Download Image September 30, 2026 Fisheries Sea Turtle Week 0 Off",
@@ -1933,7 +1949,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-un-climate-mvf1z202-14",
+      "id": "art-un-climate-mvf56smb-14",
       "title": "From energy crisis to energy transition: How renewables are reshaping energy security",
       "originalHeadline": "From energy crisis to energy transition: How renewables are reshaping energy security",
       "description": "The continuing conflict in the Middle East is disrupting global energy markets and pushing up fuel prices, with knock-on effects far beyond the region.",
@@ -1950,7 +1966,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-6",
+      "id": "art-carbon-brief-mvf56sqy-6",
       "title": "Analysis: Lula presidency saved at least 20,000km2 of Brazilian Amazon since 2022",
       "originalHeadline": "Analysis: Lula presidency saved at least 20,000km2 of Brazilian Amazon since 2022",
       "description": "An area of Amazon forest roughly the size of the US state of New Jersey has remained standing due to… The post Analysis: Lula presidency saved at least 20,000km2 of Brazilian Amazon since 2022 appeared first on Carbon Brief.",
@@ -1967,7 +1983,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2ky-7",
+      "id": "art-noaa-news-mvf56t4n-7",
       "title": "Weekend nor’easter likely to bring damaging winds, coastal flooding",
       "originalHeadline": "Weekend nor’easter likely to bring damaging winds, coastal flooding",
       "description": "Weekend nor’easter likely to bring damaging winds, coastal flooding Large waves crash over a jetty as a large coastal storm bears down on the region on March 2, 2018 in Scituate, Massachusetts. A powerful nor'easter is bringing snow, rain and high wind to much of the U.S. Northea...",
@@ -1984,7 +2000,7 @@
       "readTimeMinutes": 7
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-7",
+      "id": "art-carbon-brief-mvf56sqy-7",
       "title": "‘Concerning’ low sea ice persists as Antarctic hits third-lowest winter peak",
       "originalHeadline": "‘Concerning’ low sea ice persists as Antarctic hits third-lowest winter peak",
       "description": "Antarctic sea ice has recorded its third-smallest winter peak extent since satellite records began 48 years ago, new data reveals.… The post ‘Concerning’ low sea ice persists as Antarctic hits third-lowest winter peak appeared first on Carbon Brief.",
@@ -2001,7 +2017,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-8",
+      "id": "art-carbon-brief-mvf56sqy-8",
       "title": "Interactive: What China’s dozens of ‘five-year plans’ say about climate and energy",
       "originalHeadline": "Interactive: What China’s dozens of ‘five-year plans’ say about climate and energy",
       "description": "Almost three-quarters of the 72 five-year plans published by China this year include policies or targets related to climate change… The post Interactive: What China’s dozens of ‘five-year plans’ say about climate and energy appeared first on Carbon Brief.",
@@ -2051,7 +2067,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-9",
+      "id": "art-carbon-brief-mvf56sqy-9",
       "title": "Analysis: EVs are now nine times cheaper than petrol or diesel to drive in the UK",
       "originalHeadline": "Analysis: EVs are now nine times cheaper than petrol or diesel to drive in the UK",
       "description": "The latest surge in fossil-fuel prices means it is now up to nine times cheaper in the UK to drive… The post Analysis: EVs are now nine times cheaper than petrol or diesel to drive in the UK appeared first on Carbon Brief.",
@@ -2102,7 +2118,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-10",
+      "id": "art-carbon-brief-mvf56sqy-10",
       "title": "Explainer: How sea level rise poses an ‘existential threat’ to humans, heritage and nature",
       "originalHeadline": "Explainer: How sea level rise poses an ‘existential threat’ to humans, heritage and nature",
       "description": "For millions of people around the world, rising sea levels are already reshaping economies, livelihoods and cultures. The world’s oceans… The post Explainer: How sea level rise poses an ‘existential threat’ to humans, heritage and nature appeared first on Carbon Brief.",
@@ -2119,7 +2135,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-carbon-brief-mvf1z38s-11",
+      "id": "art-carbon-brief-mvf56sqy-11",
       "title": "Analysis: Nepal’s $20m ‘loss-and-damage’ claim only covers 0.7% of flood costs",
       "originalHeadline": "Analysis: Nepal’s $20m ‘loss-and-damage’ claim only covers 0.7% of flood costs",
       "description": "The Nepali government has requested $20m from the UN fund for “loss and damage”, following the devastating floods that hit… The post Analysis: Nepal’s $20m ‘loss-and-damage’ claim only covers 0.7% of flood costs appeared first on Carbon Brief.",
@@ -2153,7 +2169,7 @@
       "readTimeMinutes": 3
     },
     {
-      "id": "art-noaa-news-mvf1z2ky-8",
+      "id": "art-noaa-news-mvf56t4o-8",
       "title": "NOAA’s flood mapping tool now covers nearly 100% of U.S.",
       "originalHeadline": "NOAA’s flood mapping tool now covers nearly 100% of U.S.",
       "description": "NOAA’s flood mapping tool now covers nearly 100% of U.S. Experimental Flood Inundation Mapping provides valuable guidance for decision-makers and public September 24, 2026 NOAA's flood inundation map (left) depicting the forecast for flooding extent in New London, Wisconsin, and ...",
@@ -2170,7 +2186,7 @@
       "readTimeMinutes": 15
     },
     {
-      "id": "art-noaa-news-mvf1z2ky-9",
+      "id": "art-noaa-news-mvf56t4p-9",
       "title": "The Great Miami Hurricane of 1926: 100 Years of Hurricane Forecasting and Research",
       "originalHeadline": "The Great Miami Hurricane of 1926: 100 Years of Hurricane Forecasting and Research",
       "description": "The Great Miami Hurricane of 1926: 100 Years of Hurricane Forecasting and Research September 21, 2026 Predicting extreme weather events and warning the public was much more difficult before we had satellites, aircraft reconnaissance, computer models, radio, television, and the in...",

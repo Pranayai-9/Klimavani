@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowUp, ShieldCheck, Database, Compass } from 'lucide-react';
 import { ClimateCategory } from '../../types/news';
 import { CATEGORIES } from '../../data/mockArticles';

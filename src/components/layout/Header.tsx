@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Menu, X, Globe, Calendar, Search } from 'lucide-react';
 import { formatMastheadDate } from '../../utils/date';
 import { ClimateCategory } from '../../types/news';
@@ -28,8 +28,8 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="border-b border-forest-900/10 py-1.5 px-4 sm:px-6 lg:px-8 text-[11px] font-sans text-charcoal-800/80">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
           <div className="flex items-center gap-3">
-            <span className="font-semibold tracking-wider uppercase text-forest-900">Vol. I • No. 1</span>
-            <span className="hidden sm:inline text-forest-800/40">•</span>
+            <span className="font-semibold tracking-wider uppercase text-forest-900">Vol. I · No. 1</span>
+            <span className="hidden sm:inline text-forest-800/40">·</span>
             <span className="flex items-center gap-1">
               <Calendar className="w-3 h-3 text-forest-700" />
               {currentDate}

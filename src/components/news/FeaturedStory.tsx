@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, Calendar, Globe, Clock } from 'lucide-react';
 import { Article } from '../../types/news';
 import { ImageWithFallback } from '../common/ImageWithFallback';

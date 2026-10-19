@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Article } from '../../types/news';
 import { NewsCard } from './NewsCard';
 import { EmptyState } from '../common/EmptyState';
@@ -32,7 +32,7 @@ export const NewsGrid: React.FC<NewsGridProps> = ({
       return <p className="my-8 border border-red-900/20 bg-red-50 p-6 text-center text-sm text-red-900" role="alert">The article service is unavailable. {error}</p>;
     }
     if (!searchQuery?.trim() && (!category || category === 'All News')) {
-      return <p className="my-8 border border-forest-900/15 bg-white/70 p-8 text-center text-sm text-charcoal-800/75">No dispatches are available yet. The archive will appear here after the first successful collection.</p>;
+      return <p className="my-8 border border-forest-900/15 bg-white/70 p-8 text-center text-sm text-charcoal-800/75">No dispatches are available yet. The archive…</p>;
     }
     return (
       <EmptyState

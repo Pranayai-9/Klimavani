@@ -1,4 +1,4 @@
-# Logs
+﻿# Logs
 logs
 *.log
 npm-debug.log*
@@ -31,9 +31,8 @@ dist-ssr
 # TypeScript build info
 *.tsbuildinfo
 
-# Data cache (large, generated at runtime)
-# Comment out if you want to commit seed data
-data/articles.json
+# Seed data for Vercel deployment (articles.json is committed as baseline)
+# Temp atomic-write files are excluded:
 
 # Atomic write temp files
 data/*.tmp.*

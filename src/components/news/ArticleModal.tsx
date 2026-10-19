@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { X, ExternalLink, Calendar, Globe, Clock, ShieldCheck } from 'lucide-react';
 import { Article } from '../../types/news';
 import { ImageWithFallback } from '../common/ImageWithFallback';

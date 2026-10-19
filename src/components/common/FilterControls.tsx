@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowUpDown, SlidersHorizontal, RefreshCw, Radio, Clock } from 'lucide-react';
 import { ClimateCategory, SortOrder } from '../../types/news';
 import { CATEGORIES } from '../../data/mockArticles';

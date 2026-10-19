@@ -29,9 +29,9 @@ export function useNewsData(): UseNewsDataReturn {
   const fetchArticlesAndTicker = useCallback(async () => {
     try {
       // 1. Fetch articles from Express REST API
+      const articlesRes = await fetch(`${API_BASE}/articles`);
 
       if (articlesRes.ok) {
-        const API_BASE = import.meta.env.VITE_API_URL;
         const json = await articlesRes.json();
         if (json.success && Array.isArray(json.data)) {
           setArticles(json.data);
@@ -49,16 +49,15 @@ export function useNewsData(): UseNewsDataReturn {
       }
 
       // 2. Fetch wire ticker
-
+      const tickerRes = await fetch(`${API_BASE}/ticker`);
       if (tickerRes.ok) {
-        const tickerRes = await fetch(`${API_BASE}/ticker`);
         const json = await tickerRes.json();
         if (json.success && Array.isArray(json.items) && json.items.length > 0) {
           setTickerItems(json.items);
         }
       }
     } catch (err: any) {
-      console.warn('[Frontend Data] Express API unreachable, using local archive:', err.message);
+      console.warn('[Frontend Data] Express API unreachable:', err.message);
       setIsLive(false);
       setError(err.message);
     } finally {
@@ -69,10 +68,9 @@ export function useNewsData(): UseNewsDataReturn {
   const refreshFeeds = useCallback(async () => {
     setIsRefreshing(true);
     try {
+      const res = await fetch(`${API_BASE}/refresh`, { method: 'POST' });
 
       if (res.ok) {
-        const res = await fetch(`${API_BASE}/refresh`, { method: 'POST' });
-
         // Wait a moment for server-side collection to complete, then re-fetch display data
         await new Promise((r) => setTimeout(r, 1500));
         await fetchArticlesAndTicker();
